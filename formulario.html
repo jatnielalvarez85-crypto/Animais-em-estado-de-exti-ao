@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulário - Animais em Extinção</title>
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background-color: #f4f8f4;
+        padding: 20px;
+    }
+
+    form{
+        max-width: 500px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2{
+        text-align: center;
+        color: #2e7d32;
+    }
+
+    label{
+        font-weight: bold;
+    }
+
+    input, select, textarea{
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button{
+        background-color: #2e7d32;
+        color: white;
+        border: none;
+        padding: 10px;
+        width: 100%;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover{
+        background-color: #1b5e20;
+    }
+</style>
+</head>
+<body>
+
+<form>
+    <h2>Pesquisa sobre Animais em Extinção</h2>
+
+    <label>Nome:</label>
+    <input type="text" placeholder="Digite seu nome">
+
+    <label>Idade:</label>
+    <input type="number" placeholder="Digite sua idade">
+
+    <label>Qual animal em extinção você conhece?</label>
+    <select>
+        <option>Mico-leão-dourado</option>
+        <option>Arara-azul</option>
+        <option>Onça-pintada</option>
+        <option>Tigre</option>
+        <option>Urso-polar</option>
+        <option>Mico-leão-dourado</option>
+        <option>Arara-azul</option>
+        <option>Tartaruga-de-couro</option>
+        <option>Tigre</option>
+        <option>Rinoceronte-negro</option>
+        <option>Elefante-asiático</option>
+        <option>Onça-pintada</option>
+        <option>Lobo-guará</option>
+        <option>Baleia-azul</option>
+        <option>Gorila-da-montanha</option>
+        <option>Panda-gigante</option>
+        <option>Leopardo-das-neves</option>
+        <option>Peixe-boi-marinho</option>
+        <option>Tamanduá-bandeira</option>
+        <option>Urso-polar</option>
+</select>
+    </select>
+
+    <label>Você acha importante proteger esses animais?</label>
+    <input type="radio" name="protecao"> Sim
+    <input type="radio" name="protecao"> Não
+
+    <br><br>
+
+    <label>Deixe sua opinião:</label>
+    <textarea rows="4" placeholder="Escreva aqui..."></textarea>
+
+    <button type="submit">Enviar</button>
+</form>
+
+<button type="button" onclick="window.location.href='index-animais.html'">
+    Voltar
+
+</button>
+</body>
+</html>

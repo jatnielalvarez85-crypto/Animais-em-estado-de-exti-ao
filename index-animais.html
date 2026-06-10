@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Animais em Risco de Extinção</title>
+  
+    <style>
+        /* 1) ESTILOS GERAIS DA PÁGINA */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Faz a página rolar de forma suave ao clicar no menu */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f7d2ad; /* Fundo suave */
+            color: #333;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        /* 2) ESTILO DO BANNER INICIAL */
+        .banner {
+            position: relative;
+            width: 100%;
+            max-width: 2000px;
+            margin: 0 auto;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 600px; 
+            object-fit: cover;
+            display: block;
+        }
+
+        .banner .texto {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #f7d2ad;
+            font-size: 45px;
+            font-weight: bold;
+            text-shadow: 3px 3px 6px black;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* 3) ESTILO DO MENU DE NAVEGAÇÃO (FIXADO NO TOPO) */
+        nav {
+            background: #222;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .menu li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+            padding: 5px 10px;
+        }
+
+        .menu li a:hover {
+            color: #00c853;
+        }
+
+        /* 4) ESTILO DOS CARDS (CAIXAS DE CONTEÚDO) */
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-top: 30px;
+            margin-bottom: 30px;
+            /* Evita que o topo do card fique escondido atrás do menu fixo */
+            scroll-margin-top: 70px; 
+        }
+
+        .card h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #111;
+        }
+
+        /* Grade que organizes os blocos lado a lado */
+        .donations {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap:50px;
+            margin-top: 100px;
+        }
+
+        .donation-box {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid #eee;
+            transition: 0.3s;
+        }
+
+        .donation-box:hover {
+            border-color: #00c853;
+            transform: translateY(-5px);
+        }
+
+        .donation-box img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 100px;
+            margin-bottom: 50px;
+        }
+
+        /* 5) ESTILO DOS BOTÕES */
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            background: #00c853;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #009624;
+            transform: scale(1.03);
+        }
+
+        /* 6) ESTILO DO RODAPÉ */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            color: white;
+            margin-top: 40px;
+        }
+
+        /* Responsividade para telas menores (celular) */
+        @media (max-width: 600px) {
+            .menu {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            .banner .texto {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BANNER PRINCIPAL (Identificado com id="inicio") -->
+    <div class="banner" id="inicio">
+        <img src="araraj.jpg" alt="Banner Arara">
+        <div class="texto">Animais em Estado de Extinção</div>
+    </div>
+
+    <!-- MENU DE NAVEGAÇÃO CONFIGURADO COM LINKS INTERNOS -->
+    <nav>
+        <ul class="menu">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#lista-animais">Animais em Risco</a></li>
+            <li><a href="#info-adicionais">Informações</a></li>
+        </ul>
+    </nav>
+
+    <!-- ÁREA CENTRAL DO CONTEÚDO -->
+    <div class="container">
+
+        <!-- SEÇÃO 1: OS 3 ANIMAIS (Identificado com id="lista-animais") -->
+        <div class="card" id="lista-animais">
+            <h2>3 Animais em Estado de Extinção</h2>
+
+            <div class="donations">
+                <!-- Animal 1 -->
+                <div class="donation-box">
+                    <img src="vaquita.jpg" alt="Vaquita">
+                    <h3>Vaquita</h3>
+                    <a href="vaquita.html" target="_blank" class="btn">Saber mais</a>
+                </div>
+
+                <!-- Animal 2 -->
+                <div class="donation-box">
+                    <img src="leopardito.jpg" alt="Leopardo de Amur">
+                    <h3>Leopardo de amur</h3>
+                    <a href="leopardo de amur.html" target="_blank" class="btn">Saber mais</a>
+                </div>
+
+                <!-- Animal 3 -->
+                <div class="donation-box">
+                    <img src="rinoceronte.jpg" alt="Rinoceronte de Java">
+                    <h3>Rinoceronte de java</h3>
+                    <a href="rinoceronte.html" target="_blank" class="btn">Saber mais</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEÇÃO 2: MAIS INFORMAÇÕES (Identificado com id="info-adicionais") -->
+        <div class="card" id="info-adicionais">
+            <h2>Informações Adicionais</h2>
+
+            <div class="donations">
+                <div class="donation-box">
+                    <h3>Todos os animais em estado extinção</h3>
+                     <a href="animais-em-estado-de-extincao.html" target="_blank" class="btn">Saber mais</a>
+                </div>
+
+                </div>
+
+                <div class="donation-box">
+                    <h3>Formulario</h3> 
+                      <a href="formulario.html" target="_blank" class="btn">clike aqui</a>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- Fim do Container -->
+
+    <!-- RODAPÉ ÚNICO -->
+    <footer>
+        © 2026 - Animais em Estado de Extinção | Feito com ❤️
+    </footer>
+
+</body>
+</html>
